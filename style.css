@@ -1,3 +1,127 @@
-*{
-    font-family: 'Poppins', sans-serif;
+* {
+  font-family: "Poppins", sans-serif;
 }
+
+
+.nav-bar {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  border-radius: 35px;
+}
+
+.page-title {
+  width: 40vw;
+  background: #6688ff;
+  color: white;
+  padding: 12px 0px 12px 24px;
+  border-radius: 0px 14px 15px 0px;
+}
+
+.page-title h3 {
+  padding-bottom: 0.5rem;
+}
+
+.local-storage-actions {
+  margin-left: 10vw;
+}
+
+.btn-default {
+  width: 11.25rem;
+  align-items: center;
+  padding: 10px 12px;
+  gap: 4px;
+  border-radius: 10px;
+  border-width: 0em;
+  color: white;
+  margin: 0.5rem;
+}
+
+.btn-default:hover {
+  cursor: pointer;
+}
+
+.green {
+  background: #2cbe82;
+}
+
+.red {
+  background: #da2b40;
+}
+
+.add-activity {
+  margin: 0.5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.act-input {
+  width: 26.5rem;
+  padding: 10px 198px 10px 12px;
+  gap: 4px;
+  border: 1px solid #2cbe82;
+  border-radius: 10px;
+}
+
+.day-select {
+  width: 13.125rem;
+  border: 1px solid #2cbe82;
+  border-radius: 10px;
+}
+
+.time-select {
+  width: 6.375rem;
+  border: 1px solid #2cbe82;
+  border-radius: 10px;
+}
+
+.days-of-the-week {
+  display: flex;
+}
+
+.days {
+  margin: auto;
+  width: 9.375rem;
+  height: 2.063rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  border-radius: 9px 9px 0px 0px;
+  /* color: white; */
+  font-weight: bold;
+}
+
+.days a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.monday {
+  background: #ffa246;
+}
+
+.tuesday {
+  background: #35e185;
+}
+
+.wednesday {
+  background: #6688ff;
+}
+
+.thursday {
+  background-color: #b366ff;
+}
+
+.friday {
+  background: #66D1FF;
+}
+.saturday {
+  background: #FF66D4;
+}
+.sunday{
+  background: #FF6666;
+}
+
