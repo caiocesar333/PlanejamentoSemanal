@@ -50,17 +50,18 @@
   background: #da2b40;
 }
 
+
 .add-activity {
   margin: 0.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .act-input {
-  width: 26.5rem;
+  width: 10.5rem;
   padding: 10px 198px 10px 12px;
-  gap: 4px;
+  gap: px;
   border: 1px solid #2cbe82;
   border-radius: 10px;
 }
@@ -79,10 +80,11 @@
 
 .days-of-the-week {
   display: flex;
+  justify-content: flex-end;
 }
 
 .days {
-  margin: auto;
+  margin: 2.063rem;
   width: 9.375rem;
   height: 2.063rem;
   display: flex;
