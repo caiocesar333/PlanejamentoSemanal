@@ -34,63 +34,88 @@
     </section>
     <section class="add-activity-section">
       <div class="add-activity">
-        <input class="act-input" type="text" />
-        <select class="day-select" name="" id="">
-          <option value="monday">Segunda-feira</option>
-          <option value="tuesday">Terça-feira</option>
-          <option value="wednesday">Quarta-feira</option>
-          <option value="thursday">Quinta-feira</option>
-          <option value="friday">Sexta-feira</option>
-          <option value="saturday">Sábado</option>
-          <option value="sunday">Domingo</option>
-        </select>
-        <input
-          class="time-select"
-          type="time"
-          id="appt"
-          name="appt"
-          min="00:00"
-          max="24:00"
-          required
-        />
-        <button class="btn-default green">Adicionar atividade</button>
-        <button class="btn-default red">Excluir Todos</button>
+        <form id="new-act-form" class="new-act-form">
+          <input id="new-act-input" class="act-input" type="text" />
+
+          <select class="day-select" name="" id="new-act-day">
+            <option value="monday">Segunda-feira</option>
+            <option value="tuesday">Terça-feira</option>
+            <option value="wednesday">Quarta-feira</option>
+            <option value="thursday">Quinta-feira</option>
+            <option value="friday">Sexta-feira</option>
+            <option value="saturday">Sábado</option>
+            <option value="sunday">Domingo</option>
+          </select>
+          <input
+            id="new-act-time"
+            class="time-select"
+            type="time"
+            name="appt"
+            min="00:00"
+            max="24:00"
+            required
+          />
+          <button type="submit" id="new-act-submit" class="btn-default green">
+            Adicionar atividade
+          </button>
+
+          <button class="btn-default red">Excluir Todos</button>
+        </form>
       </div>
     </section>
     <section class="calendar-section">
-      <div class="days-of-the-week">
-        <div class="days monday">
-          <a href="#"><p>Segunda-feira</p></a>
+      <div class="calendar-div">
+        <div class="horarios">
+          <p>Horarios</p>
         </div>
-        <div class="days tuesday">
-          <a href="#"><p>Terça-feira</p></a>
-        </div>
-        <div class="days wednesday">
-          <a href="#"><p>Quarta-feira</p></a>
-        </div>
-        <div class="days thursday">
-          <a href="#"><p>Quinta-feira</p></a>
-        </div>
-        <div class="days friday">
-          <a href="#"><p>Sexta-feira</p></a>
-        </div>
-        <div class="days saturday">
-          <a href="#"><p>Sábado</p></a>
-        </div>
-        <div class="days sunday">
-          <a href="#"><p>Domingo</p></a>
+        <div class="days-of-the-week">
+          <div class="days monday">
+            <a href="#"><p>Segunda-feira</p></a>
+          </div>
+          <div class="days tuesday">
+            <a href="#"><p>Terça-feira</p></a>
+          </div>
+          <div class="days wednesday">
+            <a href="#"><p>Quarta-feira</p></a>
+          </div>
+          <div class="days thursday">
+            <a href="#"><p>Quinta-feira</p></a>
+          </div>
+          <div class="days friday">
+            <a href="#"><p>Sexta-feira</p></a>
+          </div>
+          <div class="days saturday">
+            <a href="#"><p>Sábado</p></a>
+          </div>
+          <div class="days sunday">
+            <a href="#"><p>Domingo</p></a>
+          </div>
         </div>
       </div>
     </section>
-    <section class="activity-section">
-      <div class="cards">
-        <div class="card">
-          <div class="time-div"></div>
-          <div class="activity-div"></div>
-          <div class="btn-remove"></div>
-        </div>
+    <section id="activity-section">
+      <div id="cards" class="cards">
+        <!-- <div id="card" class="card">
+          <aside>
+            <div class="time-div">
+              <p class="act-time" id="act-time">1111</p>
+            </div>
+          </aside>
+          <div class="retangle"></div>
+
+          <div id="content" class="content">
+            <input type="text" class="text" value="activity" readonly />
+          </div>
+          <div class="btn-remove">
+            <button class="btn-default red remove">Apagar</button>
+          </div>
+        </div> -->
+      </div>
+      <div class="activity-div">
+        <img src="/src/bola-LogoCompasso 1.png" />
       </div>
     </section>
     <script src="/script-timer.js"></script>
+    <script src="/main.js"></script>
   </body>
 </html>
