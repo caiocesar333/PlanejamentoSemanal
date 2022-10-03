@@ -1,49 +1,297 @@
-
 window.addEventListener("load", () => {
   const form = document.querySelector("#new-act-form");
   const input = document.querySelector("#new-act-input");
   const timeInput = document.querySelector("#new-act-time");
-  const list_el = document.querySelector("#cards");
+  const dayInput = document.querySelector("#new-act-day");
+
+  const mondayDiv = document.querySelector("#cardsMo");
+  const tuesdayDiv = document.querySelector("#cardsTu");
+  const wednesdayDiv = document.querySelector("#cardsWe");
+  const thursdayDiv = document.querySelector("#cardsTh");
+  const fridayDiv = document.querySelector("#cardsFr");
+  const saturdayDiv = document.querySelector("#cardsSa");
+  const sundayDiv = document.querySelector("#cardsSu");
+
+  const mondayTab = document.querySelector("#mondayTab");
+  const tuesdayTab = document.querySelector("#tuesdayTab");
+  const wednesdayTab = document.querySelector("#wednesdayTab");
+  const thursdayTab = document.querySelector("#thursdayTab");
+  const fridayTab = document.querySelector("#fridayTab");
+  const saturdayTab = document.querySelector("#saturdayTab");
+  const sundayTab = document.querySelector("#sundayTab");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const card = input.value;
     const time = timeInput.value;
+    const day = dayInput.value;
 
     if (!card) {
       alert("Escreva a atividade por favor");
       return;
     }
 
-    const card_el = document.createElement("div");
-    card_el.classList.add("card");
+    if (day == "Segunda-feira") {
+      // const mondayDiv = document.createElement("div");
+      // mondayDiv.classList.add("cards");
 
-    const time_div = document.createElement("div");
-    time_div.classList.add("time-div");
-    time_div.innerText = time;
+      const card_el = document.createElement("div");
+      card_el.classList.add("card");
 
-    const retangle = document.createElement("div");
-    retangle.classList.add("retangle");
+      const time_div = document.createElement("div");
+      time_div.classList.add("time-div");
+      time_div.classList.add("monday");
+      time_div.innerText = time;
 
-    const card_content_el = document.createElement("div");
-    card_content_el.classList.add("content");
-    card_content_el.innerText = card;
+      const retangle = document.createElement("div");
+      retangle.classList.add("retangle");
 
-    const btn_remove_div = document.createElement("div");
-    btn_remove_div.classList.add("btn-remove");
+      const card_content_el = document.createElement("div");
+      card_content_el.classList.add("content");
+      card_content_el.innerText = card;
 
-    const btn_remove = document.createElement("button");
-    btn_remove.classList.add("btn-default");
-    btn_remove.classList.add("red");
-    btn_remove.classList.add("remove");
-    btn_remove.innerText = "Apagar";
+      const btn_remove_div = document.createElement("div");
+      btn_remove_div.classList.add("btn-remove");
 
-    card_el.appendChild(time_div);
-    card_el.appendChild(retangle);
-    card_el.appendChild(card_content_el);
-    card_el.appendChild(btn_remove_div);
-    btn_remove_div.appendChild(btn_remove);
-    list_el.appendChild(card_el);
+      const btn_remove = document.createElement("button");
+      btn_remove.classList.add("btn-default");
+      btn_remove.classList.add("red");
+      btn_remove.classList.add("remove");
+      btn_remove.innerText = "Apagar";
+
+      card_el.appendChild(time_div);
+      card_el.appendChild(retangle);
+      card_el.appendChild(card_content_el);
+      btn_remove_div.appendChild(btn_remove);
+      card_el.appendChild(btn_remove_div);
+      // list_el.appendChild(card_el);
+      mondayDiv.appendChild(card_el);
+
+      btn_remove.addEventListener("click", () => {
+        mondayDiv.removeChild(card_el);
+      });
+    }
+
+    if (day == "Terça-feira") {
+      const card_el = document.createElement("div");
+      card_el.classList.add("card");
+
+      const time_div = document.createElement("div");
+      time_div.classList.add("time-div");
+      time_div.innerText = time;
+
+      const retangle = document.createElement("div");
+      retangle.classList.add("retangle");
+
+      const card_content_el = document.createElement("div");
+      card_content_el.classList.add("content");
+      card_content_el.innerText = card;
+
+      const btn_remove_div = document.createElement("div");
+      btn_remove_div.classList.add("btn-remove");
+
+      const btn_remove = document.createElement("button");
+      btn_remove.classList.add("btn-default");
+      btn_remove.classList.add("red");
+      btn_remove.classList.add("remove");
+      btn_remove.innerText = "Apagar";
+
+      card_el.appendChild(time_div);
+      card_el.appendChild(retangle);
+      card_el.appendChild(card_content_el);
+      card_el.appendChild(btn_remove_div);
+      btn_remove_div.appendChild(btn_remove);
+      tuesdayDiv.appendChild(card_el);
+
+      btn_remove.addEventListener("click", () => {
+        tuesdayDiv.removeChild(card_el);
+      });
+    }
+
+    if (day == "Quarta-feira") {
+
+      const card_el = document.createElement("div");
+      card_el.classList.add("card");
+
+      const time_div = document.createElement("div");
+      time_div.classList.add("time-div");
+      time_div.innerText = time;
+
+      const retangle = document.createElement("div");
+      retangle.classList.add("retangle");
+
+      const card_content_el = document.createElement("div");
+      card_content_el.classList.add("content");
+      card_content_el.innerText = card;
+
+      const btn_remove_div = document.createElement("div");
+      btn_remove_div.classList.add("btn-remove");
+
+      const btn_remove = document.createElement("button");
+      btn_remove.classList.add("btn-default");
+      btn_remove.classList.add("red");
+      btn_remove.classList.add("remove");
+      btn_remove.innerText = "Apagar";
+
+      card_el.appendChild(time_div);
+      card_el.appendChild(retangle);
+      card_el.appendChild(card_content_el);
+      btn_remove_div.appendChild(btn_remove);
+      card_el.appendChild(btn_remove_div);
+      wednesdayDiv.appendChild(card_el);
+
+      btn_remove.addEventListener("click", () => {
+        wednesdayDiv.removeChild(card_el);
+      });
+    }
+
+    if (day == "Quinta-feira") {
+      const card_el = document.createElement("div");
+      card_el.classList.add("card");
+
+      const time_div = document.createElement("div");
+      time_div.classList.add("time-div");
+      time_div.innerText = time;
+
+      const retangle = document.createElement("div");
+      retangle.classList.add("retangle");
+
+      const card_content_el = document.createElement("div");
+      card_content_el.classList.add("content");
+      card_content_el.innerText = card;
+
+      const btn_remove_div = document.createElement("div");
+      btn_remove_div.classList.add("btn-remove");
+
+      const btn_remove = document.createElement("button");
+      btn_remove.classList.add("btn-default");
+      btn_remove.classList.add("red");
+      btn_remove.classList.add("remove");
+      btn_remove.innerText = "Apagar";
+
+      card_el.appendChild(time_div);
+      card_el.appendChild(retangle);
+      card_el.appendChild(card_content_el);
+      btn_remove_div.appendChild(btn_remove);
+      card_el.appendChild(btn_remove_div);
+      thursdayDiv.appendChild(card_el);
+
+      btn_remove.addEventListener("click", () => {
+        thursdayDiv.removeChild(card_el);
+      });
+    }
+
+    if (day == "Sexta-feira") {
+      const card_el = document.createElement("div");
+      card_el.classList.add("card");
+
+      const time_div = document.createElement("div");
+      time_div.classList.add("time-div");
+      time_div.innerText = time;
+
+      const retangle = document.createElement("div");
+      retangle.classList.add("retangle");
+
+      const card_content_el = document.createElement("div");
+      card_content_el.classList.add("content");
+      card_content_el.innerText = card;
+
+      const btn_remove_div = document.createElement("div");
+      btn_remove_div.classList.add("btn-remove");
+
+      const btn_remove = document.createElement("button");
+      btn_remove.classList.add("btn-default");
+      btn_remove.classList.add("red");
+      btn_remove.classList.add("remove");
+      btn_remove.innerText = "Apagar";
+
+      card_el.appendChild(time_div);
+      card_el.appendChild(retangle);
+      card_el.appendChild(card_content_el);
+      btn_remove_div.appendChild(btn_remove);
+      card_el.appendChild(btn_remove_div);
+      fridayDiv.appendChild(card_el);
+
+      btn_remove.addEventListener("click", () => {
+        fridayDiv.removeChild(card_el);
+      });
+    }
+
+    if (day == "Sábado") {
+      const card_el = document.createElement("div");
+      card_el.classList.add("card");
+
+      const time_div = document.createElement("div");
+      time_div.classList.add("time-div");
+      time_div.innerText = time;
+
+      const retangle = document.createElement("div");
+      retangle.classList.add("retangle");
+
+      const card_content_el = document.createElement("div");
+      card_content_el.classList.add("content");
+      card_content_el.innerText = card;
+
+      const btn_remove_div = document.createElement("div");
+      btn_remove_div.classList.add("btn-remove");
+
+      const btn_remove = document.createElement("button");
+      btn_remove.classList.add("btn-default");
+      btn_remove.classList.add("red");
+      btn_remove.classList.add("remove");
+      btn_remove.innerText = "Apagar";
+
+      card_el.appendChild(time_div);
+      card_el.appendChild(retangle);
+      card_el.appendChild(card_content_el);
+      btn_remove_div.appendChild(btn_remove);
+      card_el.appendChild(btn_remove_div);
+      saturdayDiv.appendChild(card_el);
+
+      btn_remove.addEventListener("click", () => {
+        saturdayDiv.removeChild(card_el);
+      });
+    }
+
+    if (day == "Domingo") {
+      const card_el = document.createElement("div");
+      card_el.classList.add("card");
+
+      const time_div = document.createElement("div");
+      time_div.classList.add("time-div");
+      time_div.innerText = time;
+
+      const retangle = document.createElement("div");
+      retangle.classList.add("retangle");
+
+      const card_content_el = document.createElement("div");
+      card_content_el.classList.add("content");
+      card_content_el.innerText = card;
+
+      const btn_remove_div = document.createElement("div");
+      btn_remove_div.classList.add("btn-remove");
+
+      const btn_remove = document.createElement("button");
+      btn_remove.classList.add("btn-default");
+      btn_remove.classList.add("red");
+      btn_remove.classList.add("remove");
+      btn_remove.innerText = "Apagar";
+
+      card_el.appendChild(time_div);
+      card_el.appendChild(retangle);
+      card_el.appendChild(card_content_el);
+      btn_remove_div.appendChild(btn_remove);
+      card_el.appendChild(btn_remove_div);
+      sundayDiv.appendChild(card_el);
+
+      btn_remove.addEventListener("click", () => {
+        sundayDiv.removeChild(card_el);
+      });
+    }
+
+    
+    
+
   });
 });

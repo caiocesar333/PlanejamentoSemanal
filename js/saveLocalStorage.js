@@ -3,13 +3,18 @@ window.addEventListener("load", () => {
   const timeInput = document.querySelector("#new-act-time");
   const saveLS = document.querySelector("#saveLS");
 
-  saveLS.addEventListener("click", saveLocalStorage);
-
   function saveLocalStorage() {
     const card = input.value;
     const time = timeInput.value;
-    let atividade = card + timeInput.value;
+    let atividade = "Nome da atividade: " + card + ", " + "Horario: " + timeInput.value;
 
     localStorage.setItem("atividade", JSON.stringify(atividade));
   }
+
+  function main(){
+    var act = input.value;
+    saveLS.addEventListener("click", saveLocalStorage);
+  }
+
+  main();
 });
