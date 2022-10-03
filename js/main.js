@@ -1,19 +1,20 @@
-window.addEventListener('load', () => {
+
+window.addEventListener("load", () => {
   const form = document.querySelector("#new-act-form");
   const input = document.querySelector("#new-act-input");
   const timeInput = document.querySelector("#new-act-time");
   const list_el = document.querySelector("#cards");
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const card = input.value;
-    const time = timeInput.value
-    
-    if(!card){
-        alert("Escreva a atividade por favor");
-        return;
-    } 
+    const time = timeInput.value;
+
+    if (!card) {
+      alert("Escreva a atividade por favor");
+      return;
+    }
 
     const card_el = document.createElement("div");
     card_el.classList.add("card");
@@ -37,12 +38,12 @@ window.addEventListener('load', () => {
     btn_remove.classList.add("red");
     btn_remove.classList.add("remove");
     btn_remove.innerText = "Apagar";
-    
+
     card_el.appendChild(time_div);
     card_el.appendChild(retangle);
     card_el.appendChild(card_content_el);
     card_el.appendChild(btn_remove_div);
-    btn_remove_div.appendChild(btn_remove)
+    btn_remove_div.appendChild(btn_remove);
     list_el.appendChild(card_el);
   });
 });

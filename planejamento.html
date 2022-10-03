@@ -11,8 +11,8 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
     <title>Planejamento Semanal</title>
   </head>
@@ -24,18 +24,21 @@
           <p>Utilize o formulário para adicionar novas tarefas:</p>
         </div>
         <div class="local-storage-actions">
-          <button class="btn-default green">Salvar Local Storage</button>
-          <button class="btn-default red">Excluir Local Storage</button>
+          <button id="saveLS" class="btn-default green saveLS">Salvar Local Storage</button>
+          <button onclick="deleteLocalStorage()" class="btn-default red deleteLS">
+            Excluir Local Storage
+          </button>
         </div>
         <div class="time-stamp">
-          <h1 id="current-time"></h1>
+          <h1 class="current-time" id="current-time"></h1>
+          <h3 class="current-day">11 de outubro de 2022</h3>
         </div>
       </div>
     </section>
     <section class="add-activity-section">
       <div class="add-activity">
         <form id="new-act-form" class="new-act-form">
-          <input id="new-act-input" class="act-input" type="text" />
+          <input id="new-act-input" name="nomeAtividade" class="act-input" type="text" />
 
           <select class="day-select" name="" id="new-act-day">
             <option value="monday">Segunda-feira</option>
@@ -115,7 +118,9 @@
         <img src="/src/bola-LogoCompasso 1.png" />
       </div>
     </section>
-    <script src="/script-timer.js"></script>
-    <script src="/main.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/script-timer.js"></script>
+    <script src="./js/deleteLocalStorage.js"></script>
+    <script src="./js/saveLocalStorage.js"></script>
   </body>
 </html>

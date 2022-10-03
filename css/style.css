@@ -49,6 +49,33 @@
   background: #da2b40;
 }
 
+.time-stamp {
+  margin-left: 6rem;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.current-time {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #3b3e45;
+}
+
+.current-day {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #3b3e45;
+}
+
 .add-activity {
   margin: 0.5rem;
   margin-bottom: 1rem;
@@ -69,7 +96,7 @@
 }
 
 .day-select {
-  width: 13.125rem;
+  /* width: 20.125rem; */
   height: 3.8rem;
   padding: 10px 198px 10px 12px;
   border: 1px solid #2cbe82;
@@ -84,7 +111,7 @@
   text-align: center;
 }
 
-.calendar-div{
+.calendar-div {
   display: flex;
 }
 
