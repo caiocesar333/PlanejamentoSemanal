@@ -12,19 +12,22 @@ window.addEventListener("load", () => {
   const saturdayDiv = document.querySelector("#cardsSa");
   const sundayDiv = document.querySelector("#cardsSu");
 
+  const deleteAll = document.querySelector("#deleteAll");
+
+
+  const array = [];
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-
-    if (!card) {
-      alert("Escreva a atividade por favor");
-      return;
-    }
 
     const card = input.value;
     const time = timeInput.value;
     const day = dayInput.value;
 
-  
+    if (!card) {
+      alert("Escreva a atividade por favor");
+      return;
+    }
 
     if (day == "Segunda-feira") {
       // const mondayDiv = document.createElement("div");
@@ -66,6 +69,15 @@ window.addEventListener("load", () => {
       btn_remove.addEventListener("click", () => {
         mondayDiv.removeChild(card_el);
       });
+
+      if (array.includes(time)) {
+        console.log(array);
+        retangle.classList.add("conflicted");
+        time_div.classList.add("none");
+        card_el.classList.add("absolute");
+      } else{
+        array.push(time);    
+      }
     }
 
     if (day == "Terça-feira") {
@@ -104,6 +116,15 @@ window.addEventListener("load", () => {
       btn_remove.addEventListener("click", () => {
         tuesdayDiv.removeChild(card_el);
       });
+
+      if (array.includes(time)) {
+        console.log(array);
+        retangle.classList.add("conflicted");
+        time_div.classList.add("none");
+        card_el.classList.add("absolute");
+      } else{
+        array.push(time);    
+      }
     }
 
     if (day == "Quarta-feira") {
@@ -142,6 +163,15 @@ window.addEventListener("load", () => {
       btn_remove.addEventListener("click", () => {
         wednesdayDiv.removeChild(card_el);
       });
+
+      if (array.includes(time)) {
+        console.log(array);
+        retangle.classList.add("conflicted");
+        time_div.classList.add("none");
+        card_el.classList.add("absolute");
+      } else{
+        array.push(time);    
+      }
     }
 
     if (day == "Quinta-feira") {
@@ -180,6 +210,15 @@ window.addEventListener("load", () => {
       btn_remove.addEventListener("click", () => {
         thursdayDiv.removeChild(card_el);
       });
+
+      if (array.includes(time)) {
+        console.log(array);
+        retangle.classList.add("conflicted");
+        time_div.classList.add("none");
+        card_el.classList.add("absolute");
+      } else{
+        array.push(time);    
+      }
     }
 
     if (day == "Sexta-feira") {
@@ -218,6 +257,15 @@ window.addEventListener("load", () => {
       btn_remove.addEventListener("click", () => {
         fridayDiv.removeChild(card_el);
       });
+
+      if (array.includes(time)) {
+        console.log(array);
+        retangle.classList.add("conflicted");
+        time_div.classList.add("none");
+        card_el.classList.add("absolute");
+      } else{
+        array.push(time);    
+      }
     }
 
     if (day == "Sábado") {
@@ -256,6 +304,15 @@ window.addEventListener("load", () => {
       btn_remove.addEventListener("click", () => {
         saturdayDiv.removeChild(card_el);
       });
+
+      if (array.includes(time)) {
+        console.log(array);
+        retangle.classList.add("conflicted");
+        time_div.classList.add("none");
+        card_el.classList.add("absolute");
+      } else{
+        array.push(time);    
+      }
     }
 
     if (day == "Domingo") {
@@ -294,6 +351,16 @@ window.addEventListener("load", () => {
       btn_remove.addEventListener("click", () => {
         sundayDiv.removeChild(card_el);
       });
+
+      if (array.includes(time)) {
+        console.log(array);
+        retangle.classList.add("conflicted");
+        time_div.classList.add("none");
+        card_el.classList.add("absolute");
+      } else{
+        array.push(time);    
+      }
     }
   });
+
 });

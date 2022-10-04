@@ -177,6 +177,16 @@
   background: #ff6666;
 }
 
+.conflicted {
+  background: #ff0000;
+}
+
+.absolute {
+  position: absolute;
+  top: 47.5%;
+  left: 50%;
+}
+
 .activity-div {
   width: 100vw;
   display: flex;
@@ -184,9 +194,9 @@
   align-items: flex-end;
 }
 
-.activity-div img{
+.activity-div img {
   position: absolute;
-  top:80vh ;
+  top: 80vh;
 }
 
 .cards {
@@ -250,6 +260,14 @@ aside {
   border-radius: 15px;
   display: flex;
   align-items: center;
+  background: linear-gradient(
+    112.83deg,
+    rgba(255, 255, 255, 0.3444) 0%,
+    rgba(255, 255, 255, 0.336) 110.84%
+  );
+  border: 1px solid #ffffff;
+  box-shadow: 0px 2px 5.5px rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(10.5px);
 }
 
 .content .text {
@@ -299,10 +317,10 @@ aside {
   border: 3px solid #ffffff;
 }
 
-.none{
+.none {
   display: none;
 }
 
-.show{
+.show {
   display: flex;
 }
