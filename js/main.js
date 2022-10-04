@@ -12,25 +12,19 @@ window.addEventListener("load", () => {
   const saturdayDiv = document.querySelector("#cardsSa");
   const sundayDiv = document.querySelector("#cardsSu");
 
-  const mondayTab = document.querySelector("#mondayTab");
-  const tuesdayTab = document.querySelector("#tuesdayTab");
-  const wednesdayTab = document.querySelector("#wednesdayTab");
-  const thursdayTab = document.querySelector("#thursdayTab");
-  const fridayTab = document.querySelector("#fridayTab");
-  const saturdayTab = document.querySelector("#saturdayTab");
-  const sundayTab = document.querySelector("#sundayTab");
-
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-
-    const card = input.value;
-    const time = timeInput.value;
-    const day = dayInput.value;
 
     if (!card) {
       alert("Escreva a atividade por favor");
       return;
     }
+
+    const card = input.value;
+    const time = timeInput.value;
+    const day = dayInput.value;
+
+  
 
     if (day == "Segunda-feira") {
       // const mondayDiv = document.createElement("div");
@@ -46,6 +40,7 @@ window.addEventListener("load", () => {
 
       const retangle = document.createElement("div");
       retangle.classList.add("retangle");
+      retangle.classList.add("monday");
 
       const card_content_el = document.createElement("div");
       card_content_el.classList.add("content");
@@ -79,10 +74,12 @@ window.addEventListener("load", () => {
 
       const time_div = document.createElement("div");
       time_div.classList.add("time-div");
+      time_div.classList.add("tuesday");
       time_div.innerText = time;
 
       const retangle = document.createElement("div");
       retangle.classList.add("retangle");
+      retangle.classList.add("tuesday");
 
       const card_content_el = document.createElement("div");
       card_content_el.classList.add("content");
@@ -110,16 +107,17 @@ window.addEventListener("load", () => {
     }
 
     if (day == "Quarta-feira") {
-
       const card_el = document.createElement("div");
       card_el.classList.add("card");
 
       const time_div = document.createElement("div");
       time_div.classList.add("time-div");
+      time_div.classList.add("wednesday");
       time_div.innerText = time;
 
       const retangle = document.createElement("div");
       retangle.classList.add("retangle");
+      retangle.classList.add("wednesday");
 
       const card_content_el = document.createElement("div");
       card_content_el.classList.add("content");
@@ -152,10 +150,12 @@ window.addEventListener("load", () => {
 
       const time_div = document.createElement("div");
       time_div.classList.add("time-div");
+      time_div.classList.add("thursday");
       time_div.innerText = time;
 
       const retangle = document.createElement("div");
       retangle.classList.add("retangle");
+      retangle.classList.add("thursday");
 
       const card_content_el = document.createElement("div");
       card_content_el.classList.add("content");
@@ -188,10 +188,12 @@ window.addEventListener("load", () => {
 
       const time_div = document.createElement("div");
       time_div.classList.add("time-div");
+      time_div.classList.add("friday");
       time_div.innerText = time;
 
       const retangle = document.createElement("div");
       retangle.classList.add("retangle");
+      retangle.classList.add("friday");
 
       const card_content_el = document.createElement("div");
       card_content_el.classList.add("content");
@@ -224,10 +226,12 @@ window.addEventListener("load", () => {
 
       const time_div = document.createElement("div");
       time_div.classList.add("time-div");
+      time_div.classList.add("saturday");
       time_div.innerText = time;
 
       const retangle = document.createElement("div");
       retangle.classList.add("retangle");
+      retangle.classList.add("saturday");
 
       const card_content_el = document.createElement("div");
       card_content_el.classList.add("content");
@@ -260,10 +264,12 @@ window.addEventListener("load", () => {
 
       const time_div = document.createElement("div");
       time_div.classList.add("time-div");
+      time_div.classList.add("sunday");
       time_div.innerText = time;
 
       const retangle = document.createElement("div");
       retangle.classList.add("retangle");
+      retangle.classList.add("sunday");
 
       const card_content_el = document.createElement("div");
       card_content_el.classList.add("content");
@@ -289,9 +295,5 @@ window.addEventListener("load", () => {
         sundayDiv.removeChild(card_el);
       });
     }
-
-    
-    
-
   });
 });

@@ -225,8 +225,8 @@ aside {
 
 .time-div {
   width: 5.313rem;
-  background: #6688ff;
-  background: rgba(102, 136, 255, 0.4);
+  /* background: #6688ff; */
+  /* background: rgba(102, 136, 255, 0.4); */
   border-bottom: 1px solid #dcdfe3;
   border-radius: 10px;
   height: 5.313rem;
@@ -239,7 +239,7 @@ aside {
   margin-left: 1.313rem;
   width: 0.875rem;
   height: 5.313rem;
-  background: #6688ff;
+  /* background: #6688ff; */
   border-radius: 15px 0px 0px 15px;
 }
 
