@@ -324,3 +324,9 @@ aside {
 .show {
   display: flex;
 }
+
+
+.days:hover{
+  background:#3b3e45;
+  cursor: pointer;
+}
